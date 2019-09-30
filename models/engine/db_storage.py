@@ -103,11 +103,11 @@ class DBStorage:
         """
            creates all tables in database & session from engine
         """
-        Base.metadata.create_all(self.__engine)
-        self.__session = scoped_session(
-            sessionmaker(
+        create_session = sessionmaker(
                 bind=self.__engine,
-                expire_on_commit=False))
+                expire_on_commit=False)
+        Base.metadata.create_all(self.__engine)
+        self.__session = scoped_session(create_session)
 
     def close(self):
         """
