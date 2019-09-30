@@ -9,11 +9,3 @@ $(function () {
     $('.amenities h4').text(Object.values(amen_Checked).join(', '));
   });
 });
-$.ajax({
-  url: 'http://0.0.0.0:5001/api/v1/status/',
-  type: 'GET',
-  dataType: 'json', // added data type
-  success: function (available) {
-    $('DIV#api_status').addClass(available);
-  }
-});
