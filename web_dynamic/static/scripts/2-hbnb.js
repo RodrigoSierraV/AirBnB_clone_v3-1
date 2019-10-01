@@ -10,7 +10,7 @@ $(function () {
   });
 });
 $.ajax({
-  url: 'http://0.0.0.0:5001/api/v1/status/',
+  url: 'http://localhost:5001/api/v1/status/',
   type: 'GET',
   dataType: 'json', // added data type
   success: function (available) {
