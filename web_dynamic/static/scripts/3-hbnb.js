@@ -45,9 +45,6 @@ $.ajax({
                 '<br />' + place.number_bathrooms + ' Bathroom' +
               '</div>' +
             '</div>' +
-            '<div class="user">' +
-              '<strong>Owner: ' + user.first_name + ' ' + user.last_name + '</strong>' +
-            '</div>' +
             '<div class="description">' +
               place.description +
             '</div>' +
